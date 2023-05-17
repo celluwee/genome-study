@@ -1,0 +1,17 @@
+#!/bin/bash
+#cat *.fasta >> merged.fasta
+ccm () {
+eval "clustalw -infile=${1}.fasta -output=FASTA -outfile=clustal/${1}.fasta"
+eval "rm ${1}.dnd" 
+}
+ccm ATP_6sub
+ccm CoB
+ccm CoC_1sub
+ccm CoC_2sub
+#ccm CoC_3sub
+ccm NADH_1sub
+ccm NADH_2sub
+ccm NADH_3sub
+ccm NADH_4sub
+ccm NADH_5sub
+ccm NADH_6sub
